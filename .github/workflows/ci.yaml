@@ -3,14 +3,10 @@ on:
   pull_request
 jobs:
   test_sdformat_urdf:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
-        ros-distro: ["humble", "rolling"]
-        gazebo-version:
-          - "fortress"  # libsdformat12
-    env:
-       GAZEBO_VERSION: ${{ matrix.gazebo-version }}
+        ros-distro: ["rolling"]
     steps:
       - uses: ros-tooling/setup-ros@v0.7
         with:
