@@ -15,6 +15,7 @@ jobs:
       - uses: ros-tooling/setup-ros@master
         with:
           required-ros-distributions: ${{ matrix.ros-distro }}
+          use-ros2-testing: true
       - name: Build and test all packages
         uses: ros-tooling/action-ros-ci@v0.2
         with:
