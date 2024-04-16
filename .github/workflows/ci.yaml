@@ -12,7 +12,7 @@ jobs:
     container:
       image: ${{ matrix.docker-image }}
     steps:
-      - uses: ros-tooling/setup-ros@v0.7
+      - uses: ros-tooling/setup-ros@master
         with:
           required-ros-distributions: ${{ matrix.ros-distro }}
       - name: Build and test all packages
